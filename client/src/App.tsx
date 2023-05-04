@@ -1,4 +1,5 @@
 import './App.css'
+import { Header } from './Components/Header';
 
 function App() {
 
@@ -6,6 +7,7 @@ function App() {
   let boolType : boolean;
   let multipleTypes : boolean | string;
 
+  //Tuple
   let arrayType : [number,number,Date];
 
   arrayType = [1,2,new Date()];
@@ -22,13 +24,16 @@ function App() {
     albums: ['Lateralus']
   }
 
+  // Not native to JS , addition to runtime
+  enum Grades {A,B,C,D,E}
+
   const sum = (a :number , b: number) => {
     return a+ b;
   }
 
   return (
     <div>
-        Typescript starter
+       <Header title={'Title'} />
     </div>
   )
 }
